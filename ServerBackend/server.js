@@ -26,7 +26,7 @@ app.post('/api/register', async (req, res) => {
   try {
     const pool = await sql.connect(config);
 
-    const query = `INSERT INTO users (username, password,name) VALUES ('${username}', '${password}','name')`;
+    const query = `INSERT INTO users (username, password) VALUES ('${username}', '${password}')`;
     await pool.request().query(query);
 
     res.sendStatus(201); 
