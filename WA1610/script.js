@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const formData = new FormData(registerForm);
     const username = formData.get('username');
     const password = formData.get('password');
-    const name = formData.get('name');
 
     try {
       const response = await fetch('http://localhost:3000/api/register', {
@@ -42,14 +41,11 @@ document.addEventListener('DOMContentLoaded', function () {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username, password, name }),
+        body: JSON.stringify({ username, password }),
+        
       });
 
-      if (response.status === 200) {
-        window.location.href = 'homepage.html';
-      } else {
-        registerError.textContent = 'Registration failed';
-      }
+      registerError.textContent = 'Registration complete';
     } catch (error) {
       console.error(error);
     }
