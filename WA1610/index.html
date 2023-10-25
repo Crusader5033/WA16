@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login and Registration</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <form id="loginForm" action="http://localhost:3000/api/login" method="POST">
+      <input type="text" placeholder="Username" name="username" required>
+      <input type="password" placeholder="Password" name="password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p class="error" id="loginError"></p>
+
+    <h2>Register</h2>
+    <form id="registerForm" action="http://localhost:3000/api/register" method="POST">
+      <input type="text" placeholder="Username" name="username" required>
+      <input type="password" placeholder="Password" name="password" required>
+      <input type="text" placeholder="Name" name="name" required>
+      <button type="submit">Register</button>
+    </form>
+    <p class="error" id="registerError"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
