@@ -38,8 +38,8 @@ The server is configured with the following parameters:
 
 - **Server Address:** 193.85.203.188
 - **Database:** prochazka6
-- **User:** prochazka6
-- **Password:** dominik2005
+- **User:** 
+- **Password:** 
 - **Options:**
   - `encrypt: true`
   - `trustServerCertificate: true`
